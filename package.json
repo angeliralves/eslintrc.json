@@ -24,6 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@shapeng1998/eslint-config": "^0.5.4",
+    "@types/eslint": "^8.4.3",
     "@types/node": "^18.0.0",
     "@types/prettier": "^2.6.3",
     "bumpp": "^8.2.1",
