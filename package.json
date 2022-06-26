@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "unbuild",
-    "release": "bumpp && pnpm publish --access public",
+    "release": "bumpp && pnpm publish",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
