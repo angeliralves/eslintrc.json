@@ -2,13 +2,13 @@
   "name": "eslintrc.json",
   "version": "0.3.0",
   "description": "Quickly create an opinionated ESLint configuration",
-  "main": "dist/index.cjs",
+  "main": "dist/index.mjs",
   "module": "dist/index.mjs",
-  "bin": "dist/index.mjs",
+  "bin": "bin/index.mjs",
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "unbuild",
-    "release": "bumpp --commit --push --tag && pnpm publish --access public",
+    "release": "bumpp && pnpm publish --access public",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },

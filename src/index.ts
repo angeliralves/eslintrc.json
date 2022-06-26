@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { parseNi, run } from '@antfu/ni'
 import { writeFile } from 'fs/promises'
 import path from 'path'
