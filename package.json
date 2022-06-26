@@ -1,0 +1,39 @@
+{
+  "name": "eslintrc.json",
+  "version": "0.0.1",
+  "description": "Quickly create an opinionated ESLint configuration",
+  "main": "dist/index.mjs",
+  "bin": "dist/index.mjs",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "unbuild",
+    "release": "bumpp --commit --push --tag && pnpm publish --access public",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "eslint",
+    "eslintrc",
+    "eslint-config",
+    "prettier",
+    "prettierrc",
+    "prettier-config",
+    "prettier-eslint"
+  ],
+  "author": "Peng Sha <jack@shapeng1998.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@shapeng1998/eslint-config": "^0.5.4",
+    "@types/node": "^18.0.0",
+    "@types/prettier": "^2.6.3",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.18.0",
+    "prettier": "^2.7.1",
+    "tsx": "^3.6.0",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.4"
+  },
+  "dependencies": {
+    "@antfu/ni": "^0.16.3"
+  }
+}
