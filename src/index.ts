@@ -1,34 +1,24 @@
 import { parseNi, run } from '@antfu/ni'
 import { writeFile } from 'fs/promises'
 import path from 'path'
-import type { Config } from 'prettier'
-import type { Linter } from 'eslint'
+import { eslintConfig, prettierConfig } from './config'
+import type { ESLintConfig, PrettierConfig } from './config'
 
-const writePrettierConfigFile = async () => {
-  const prettierConfig: Config = {
-    semi: false,
-    singleQuote: true,
-  }
-  const prettierConfigFile = path.join(process.cwd(), '.prettierrc')
-  await writeFile(
-    prettierConfigFile,
-    JSON.stringify(prettierConfig, null, 2) + '\n'
-  )
-}
+const writeConfigFile = async (
+  configObj: PrettierConfig | ESLintConfig,
+  configFileName: string
+) => {
+  const configFilePath = path.join(process.cwd(), configFileName)
+  const configFileString = JSON.stringify(configObj, null, 2) + '\n'
 
-const writeEslintConfigFile = async () => {
-  const eslintConfig: Linter.Config = {
-    extends: '@shapeng1998',
-  }
-  const eslintConfigFile = path.join(process.cwd(), '.eslintrc')
-  await writeFile(
-    eslintConfigFile,
-    JSON.stringify(eslintConfig, null, 2) + '\n'
-  )
+  await writeFile(configFilePath, configFileString)
 }
 
 async function main() {
-  await Promise.all([writePrettierConfigFile(), writeEslintConfigFile()])
+  await Promise.all([
+    writeConfigFile(prettierConfig, '.prettierrc'),
+    writeConfigFile(eslintConfig, '.eslintrc'),
+  ])
 
   const args = [
     '-D',
