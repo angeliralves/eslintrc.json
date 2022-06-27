@@ -1,6 +1,6 @@
 {
   "name": "eslintrc.json",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Quickly create an opinionated ESLint configuration",
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
