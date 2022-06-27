@@ -24,7 +24,7 @@ const writeEslintConfigFile = async () => {
 async function main() {
   await Promise.all([writePrettierConfigFile(), writeEslintConfigFile()])
 
-  const args = ['-D', 'prettier', 'eslint', '@shapeng1998/eslint-config']
+  const args = ['-D', 'prettier', 'eslint', 'typescript', '@shapeng1998/eslint-config']
   await run(parseNi, args)
 }
 
