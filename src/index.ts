@@ -10,7 +10,10 @@ const writePrettierConfigFile = async () => {
     singleQuote: true,
   }
   const prettierConfigFile = path.join(process.cwd(), '.prettierrc')
-  await writeFile(prettierConfigFile, JSON.stringify(prettierConfig, null, 2))
+  await writeFile(
+    prettierConfigFile,
+    JSON.stringify(prettierConfig, null, 2) + '\n'
+  )
 }
 
 const writeEslintConfigFile = async () => {
@@ -18,13 +21,22 @@ const writeEslintConfigFile = async () => {
     extends: '@shapeng1998',
   }
   const eslintConfigFile = path.join(process.cwd(), '.eslintrc')
-  await writeFile(eslintConfigFile, JSON.stringify(eslintConfig, null, 2))
+  await writeFile(
+    eslintConfigFile,
+    JSON.stringify(eslintConfig, null, 2) + '\n'
+  )
 }
 
 async function main() {
   await Promise.all([writePrettierConfigFile(), writeEslintConfigFile()])
 
-  const args = ['-D', 'prettier', 'eslint', 'typescript', '@shapeng1998/eslint-config']
+  const args = [
+    '-D',
+    'prettier',
+    'eslint',
+    'typescript',
+    '@shapeng1998/eslint-config',
+  ]
   await run(parseNi, args)
 }
 
