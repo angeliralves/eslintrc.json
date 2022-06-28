@@ -1,8 +1,8 @@
+import { writeFile } from 'node:fs/promises'
 import { parseNi, run } from '@antfu/ni'
-import { writeFile } from 'fs/promises'
-import path from 'path'
-import type { ConfigProps } from './config'
+import path from 'node:path'
 import { configs } from './config'
+import type { ConfigProps } from './config'
 
 const writeConfigFile = async ({ fileName, obj }: ConfigProps) => {
   const configFilePath = path.join(process.cwd(), fileName)

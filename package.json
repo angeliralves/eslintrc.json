@@ -5,6 +5,10 @@
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
   "bin": "bin/index.mjs",
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "unbuild",
