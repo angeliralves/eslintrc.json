@@ -1,14 +1,33 @@
 import type { Config } from 'prettier'
 import type { Linter } from 'eslint'
 
-export type PrettierConfig = Config
-export type ESLintConfig = Linter.Config
+type PrettierConfig = Config
+type ESLintConfig = Linter.Config
 
-export const prettierConfig: PrettierConfig = {
+type ConfigObjType = PrettierConfig | ESLintConfig
+type ConfigFileNameType = '.prettierrc' | '.eslintrc'
+
+const prettierConfig: PrettierConfig = {
   semi: false,
   singleQuote: true,
 }
 
-export const eslintConfig: ESLintConfig = {
+const eslintConfig: ESLintConfig = {
   extends: '@shapeng1998',
 }
+
+export interface ConfigProps {
+  fileName: ConfigFileNameType
+  obj: ConfigObjType
+}
+
+export const configs: ConfigProps[] = [
+  {
+    fileName: '.prettierrc',
+    obj: prettierConfig,
+  },
+  {
+    fileName: '.eslintrc',
+    obj: eslintConfig,
+  },
+]
