@@ -2420,10 +2420,10 @@ packages:
       typescript: 4.7.4
     dev: true
 
-  /mlly/0.5.3:
-    resolution: {integrity: sha512-im69tuLD9EJh9fc9TZRpJEFvsBcGMez7glUCWDcHWWCKzhvPmNvyaYjp/+h0qJJN/Xovrs//GzGjOOKmFw4Gog==}
+  /mlly/0.5.4:
+    resolution: {integrity: sha512-gFlsLWCjVwu/LM/ZfYUkmnbBoz7eyBIMUwVQYDqhd8IvtNFDeZ95uwAyxHE2Xx7tQwePQaCo4fECZ9MWFEUTgQ==}
     dependencies:
-      pathe: 0.2.0
+      pathe: 0.3.1
       pkg-types: 0.3.3
     dev: true
 
@@ -2605,7 +2605,7 @@ packages:
     resolution: {integrity: sha512-6AJcCMnjUQPQv/Wk960w0TOmjhdjbeaQJoSKWRQv9N3rgkessCu6J0Ydsog/nw1MbpnxHuPzYbfOn2KmlZO1FA==}
     dependencies:
       jsonc-parser: 3.0.0
-      mlly: 0.5.3
+      mlly: 0.5.4
       pathe: 0.3.1
     dev: true
 
@@ -3005,7 +3005,7 @@ packages:
       magic-string: 0.26.2
       mkdirp: 1.0.4
       mkdist: 0.3.13_typescript@4.7.4
-      mlly: 0.5.3
+      mlly: 0.5.4
       mri: 1.2.0
       pathe: 0.2.0
       pkg-types: 0.3.3
