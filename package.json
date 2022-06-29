@@ -1,6 +1,6 @@
 {
   "name": "eslintrc.json",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Quickly create an opinionated ESLint configuration",
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "unbuild",
-    "release": "bumpp && pnpm publish",
+    "release": "pnpm build && bumpp -y && pnpm publish",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -28,7 +28,7 @@
   "author": "Peng Sha <jack@shapeng1998.com>",
   "license": "MIT",
   "devDependencies": {
-    "@shapeng1998/eslint-config": "^0.5.4",
+    "@shapeng1998/eslint-config": "^0.5.10",
     "@types/eslint": "^8.4.3",
     "@types/node": "^18.0.0",
     "@types/prettier": "^2.6.3",
@@ -41,8 +41,5 @@
   },
   "dependencies": {
     "@antfu/ni": "^0.16.3"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
   }
 }
