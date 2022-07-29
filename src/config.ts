@@ -2,7 +2,7 @@ import type { Config } from 'prettier'
 import type { Linter } from 'eslint'
 
 type PrettierConfig = Config
-type ESLintConfig = Linter.Config
+type ESLintConfig = Linter.BaseConfig
 
 type ConfigObjType = PrettierConfig | ESLintConfig
 type ConfigFileNameType = '.prettierrc' | '.eslintrc'
