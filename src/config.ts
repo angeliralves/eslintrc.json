@@ -4,8 +4,8 @@ import type { Linter } from 'eslint'
 type PrettierConfig = Config
 type ESLintConfig = Linter.BaseConfig
 
-type ConfigObjType = PrettierConfig | ESLintConfig
-type ConfigFileNameType = '.prettierrc' | '.eslintrc'
+type ConfigObj = PrettierConfig | ESLintConfig
+type ConfigFileName = '.prettierrc' | '.eslintrc'
 
 const prettierConfig: PrettierConfig = {
   semi: false,
@@ -17,8 +17,8 @@ const eslintConfig: ESLintConfig = {
 }
 
 export interface ConfigProps {
-  fileName: ConfigFileNameType
-  obj: ConfigObjType
+  fileName: ConfigFileName
+  obj: ConfigObj
 }
 
 export const configs: ConfigProps[] = [

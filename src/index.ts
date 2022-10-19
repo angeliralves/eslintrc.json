@@ -6,9 +6,9 @@ import type { ConfigProps } from './config'
 
 const writeConfigFile = async ({ fileName, obj }: ConfigProps) => {
   const configFilePath = path.join(process.cwd(), fileName)
-  const configFileString = JSON.stringify(obj, null, 2) + '\n'
+  const configFileContent = JSON.stringify(obj, null, 2) + '\n'
 
-  await writeFile(configFilePath, configFileString)
+  await writeFile(configFilePath, configFileContent)
 }
 
 async function main() {
